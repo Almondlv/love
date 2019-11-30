@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .a {
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="test">
+        <h1 id="loopText" class="a"></h1>
+    </div>
+    <script type="text/javascript">
+        var text = "See me How I Love You ♥";
+        var count = 1;
+
+        function oneByOne() {
+            var screen = text.substr(0, count); /*substr(0,count)指的是从第零个字节开始到count的字节*/
+            loopText.innerHTML = screen;
+            count++;
+            if (count > text.length)
+                return;
+            setTimeout(oneByOne, 250);
+        }
+        onload = oneByOne;
+    </script>
+</body>
+
+</html>
